@@ -21,16 +21,20 @@ public class Ejemplo02 {
         Scanner entrada = new Scanner(System.in);
         System.out.println("Ingrese el limite:");
         limite = entrada.nextInt();
-        
-        int valorA = obtenerNumero(limite); // 3
-        int valorB = obtenerNumero(limite); // 2
-        int suma = obtnerSuma(valorA, valorB);
-        
-        
-        System.out.printf("La suma de %d + %d es igual a: %d\n",
-                valorA,
-                valorB,
-                suma);
+        if (limite >= 0)
+        {
+            int valorA = obtenerNumero(limite); // 3
+            int valorB = obtenerNumero(limite); // 2
+            int suma = obtnerSuma(valorA, valorB);
+
+            System.out.printf("La suma de %d + %d es igual a: %d\n",
+                    valorA,
+                    valorB,
+                    suma);
+        }else{
+        System.out.println("Error");        
+                }
+
     }
 
     public static int obtenerNumero(int limite) {
